@@ -9,5 +9,3 @@ app.use('/posts',express.static('dest'));
 app.listen(port, function() {
 	console.log("Listening on port",port)
 }); 
-
-
