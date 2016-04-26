@@ -16,15 +16,10 @@ metalsmith(__dirname)
     .destination('./dest')
     .use(markdown())
     .use(collections({
-        blogposts: { 
+        articles: {
+            pattern: 'content/*/*.*',
             sortBy: 'date',
             reverse: 'true'
-        },
-        projects: {
-            sortBy: 'date'
-        },
-        articles: {
-            pattern: '*/*.*'
         }
     }))
     .use(permalinks())

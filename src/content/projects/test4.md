@@ -1,8 +1,8 @@
 ---
 title: Project 4
 date: 2016-04-29
-collection: projects
 layout: project.hbs
+tag: project
 excerpt: Pater nostrum, e pluribus unum, ad hominem, ad hominem, ad hominem.
 ---
 

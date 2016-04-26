@@ -1,7 +1,8 @@
 {{> header}}
 <h1>{{title}}</h1>
 {{#each collections.articles}}
-	<div class="col-md-4" style="background-color: #ddd">
+	<div class="col-md-4 card">
+		<p class="small tag {{tag}}">{{tag}}</p>
 		<h2><a href="../../{{this.path}}">{{this.title}}</a></h2>
 		<p>{{this.excerpt}}</p>
 	</div>

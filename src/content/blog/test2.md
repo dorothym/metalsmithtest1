@@ -1,8 +1,8 @@
 ---
 title: Blogoriffic
 date: 2016-04-21
-collection: blogposts
 layout: blog.hbs
+tag: blog
 excerpt: Auc haius hoc, nam sartorensis in halitosis terrapin.
 ---
 
