@@ -9,31 +9,34 @@ var metalsmith = require('metalsmith'),
 metalsmith(__dirname)
     .source('./src')
     .destination('./dest')
-    // .use(permalinks({pattern: 'posts/:title'}))
     .use(markdown())
     .use(collections({
+        blogposts: { 
+            sortBy: 'date',
+            reverse: 'true'
+        },
         projects: {
             sortBy: 'date',
-            reverse: true,
-            metadata: {
-                foo: 'bar'
-            }
+            reverse: 'false'
+        },
+        articles: {
+            pattern: '*'
         }
     }))
+    .use(permalinks())
     .use(layouts({
         engine: 'handlebars',
         directory: 'templates'
     }))
     .build(function (err) {
         if (err) {
-        	console.err("Error!");
-            throw err;
+            throw err
         }
         else {
             console.log("Successful build");
         }
     });
 
-// console.log("Metalsmith object",metalsmith)
+console.log("Metalsmith object",metalsmith)
 
 

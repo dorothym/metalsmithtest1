@@ -1,9 +1,8 @@
 <h1>{{title}}</h1>
 
-<h2>Collections test:</h2>
-{{#each collections.projects}}
-    {{this.title}}
-    {{this.contents}}
+<ul>
+{{#each collections.articles}}
+	<li><a href="./{{this.path}}">{{this.title}}</a></li>
 {{/each}}
+</ul>
 
-<h2>The rest of the content</h2>
