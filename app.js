@@ -1,4 +1,5 @@
 var express = require('express'),
+	handlebars = require('handlebars'),
 	metalsmith = require('metalsmith'),
 	// branch = require('metalsmith-branch'),
 	collections = require('metalsmith-collections'),
@@ -12,6 +13,8 @@ var express = require('express'),
 
 var app = express();
 var port = 3030;
+
+require('./build.js');
 
 app.use('/posts',express.static('build'));
 
