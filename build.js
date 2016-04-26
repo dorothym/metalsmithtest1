@@ -1,10 +1,15 @@
+
 var metalsmith = require('metalsmith'),
     handlebars = require('handlebars'),
     collections = require('metalsmith-collections'),
     markdown = require('metalsmith-markdown'),
     permalinks = require('metalsmith-permalinks'),
     templates = require('metalsmith-templates'),
-    layouts = require('metalsmith-layouts');
+    layouts = require('metalsmith-layouts'),
+    fs = require('fs');
+
+handlebars.registerPartial('header', fs.readFileSync(__dirname + '/templates/partials/header.hbt').toString());
+handlebars.registerPartial('footer', fs.readFileSync(__dirname + '/templates/partials/footer.hbt').toString());
 
 metalsmith(__dirname)
     .source('./src')
@@ -16,11 +21,10 @@ metalsmith(__dirname)
             reverse: 'true'
         },
         projects: {
-            sortBy: 'date',
-            reverse: 'false'
+            sortBy: 'date'
         },
         articles: {
-            pattern: '*'
+            pattern: '*/*.*'
         }
     }))
     .use(permalinks())

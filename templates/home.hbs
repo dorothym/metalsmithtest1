@@ -1,8 +1,10 @@
+{{> header}}
 <h1>{{title}}</h1>
-
-<ul>
 {{#each collections.articles}}
-	<li><a href="./{{this.path}}">{{this.title}}</a></li>
+	<div class="col-md-4" style="background-color: #ddd">
+		<h2><a href="../../{{this.path}}">{{this.title}}</a></h2>
+		<p>{{this.excerpt}}</p>
+	</div>
 {{/each}}
-</ul>
 
+{{> footer}}

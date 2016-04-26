@@ -3,6 +3,7 @@ title: Blogoriffic
 date: 2016-04-21
 collection: blogposts
 layout: blog.hbs
+excerpt: Auc haius hoc, nam sartorensis in halitosis terrapin.
 ---
 
 ## You can find me in the /blog folder.

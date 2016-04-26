@@ -1,6 +1,8 @@
+{{> header}}
 <h1>{{title}}</h1>
 <ul>
 {{#each collections.blogposts}}
 	<li><a href="../{{this.path}}">{{this.title}}</a></li>
 {{/each}}
 </ul>
+{{> footer}}

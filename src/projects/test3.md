@@ -3,6 +3,7 @@ title: Project 3
 date: 2010-01-01
 collection: projects
 layout: project.hbs
+excerpt: Auricula meretricula, ero eras erat, eramus eratis erant.
 ---
 
 ## Blockquotes
