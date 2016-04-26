@@ -1,17 +1,39 @@
-var metalsmith = require('metalsmith');
-var layouts = require('metalsmith-layouts');
+var metalsmith = require('metalsmith'),
+    handlebars = require('handlebars'),
+    collections = require('metalsmith-collections'),
+    markdown = require('metalsmith-markdown'),
+    permalinks = require('metalsmith-permalinks'),
+    templates = require('metalsmith-templates'),
+    layouts = require('metalsmith-layouts');
 
 metalsmith(__dirname)
     .source('./src')
-    .destination('./build')
+    .destination('./dest')
+    // .use(permalinks({pattern: 'posts/:title'}))
+    .use(markdown())
+    .use(collections({
+        projects: {
+            sortBy: 'date',
+            reverse: true,
+            metadata: {
+                foo: 'bar'
+            }
+        }
+    }))
     .use(layouts({
         engine: 'handlebars',
         directory: 'templates'
     }))
-    .use(permalinks({pattern: 'posts/:title'}))
     .build(function (err) {
         if (err) {
-        	console.err("Error!")
+        	console.err("Error!");
             throw err;
         }
+        else {
+            console.log("Successful build");
+        }
     });
+
+// console.log("Metalsmith object",metalsmith)
+
+
