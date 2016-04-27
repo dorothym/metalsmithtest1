@@ -20,6 +20,12 @@ metalsmith(__dirname)
             pattern: 'content/*/*.*',
             sortBy: 'date',
             reverse: 'true'
+        },
+        blog: {
+            pattern: 'content/blog/*.*'
+        },
+        projects: {
+            pattern: 'content/projects/*.*'
         }
     }))
     .use(permalinks())

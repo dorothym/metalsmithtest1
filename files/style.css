@@ -1,5 +1,20 @@
 body {
+  background-color: #e0e0e0;
+  color: #1f1f1f;
   padding-top: 50px;
+}
+
+.navbar-inverse {
+	background-color: #3a606e;
+	background-image: none;
+}
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav>li>a {
+	color: #e0e0e0;
+	text-shadow: none;
+}
+.navbar-brand {
+	font-weight: bold;
 }
 .starter-template {
   padding: 40px 15px;
@@ -11,4 +26,48 @@ body {
 
 footer {
 	text-align: center;
+}
+
+h1 {
+	color: #3a606e;
+}
+
+h2 {
+	color: #607b7d;
+}
+
+h3 {
+	color: #828e82;
+}
+
+a, a:hover, a:focus {
+	color: #aaae8e;
+}
+
+.card .panel {
+	background-color: #ffffff;
+	background-image: none;
+	border: 1px solid #828e82;
+	border-radius: 0px;
+	height: 175px;
+}
+
+.card .panel-default .panel-heading {
+	background-color: #607b7d;
+	background-image: none;
+	border-radius: 0px;
+}
+
+.card .panel-default .panel-heading h3.panel-title a {
+	color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+    .card .panel {
+    	height: 150px;
+    }
+}
+
+.row .col-lg-10 {
+	background-color: #ffffff;
 }

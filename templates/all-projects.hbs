@@ -1,0 +1,14 @@
+{{> header}}
+<h1>{{title}}</h1>
+
+{{#each collections.projects}}
+<div class="row">
+	<div class="col-lg-10">
+		<h2><a href="../../{{this.path}}">{{this.title}}</a></h2>
+		{{this.excerpt}}
+	</div>
+</div>
+{{/each}}
+
+{{> footer}}
+

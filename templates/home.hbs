@@ -1,11 +1,26 @@
 {{> header}}
-<h1>{{title}}</h1>
+<h1>Blog and Projects</h1>
+
+<ul class="list-inline">
+	<li><h3 class="small">Filter:</h3></li>
+	<li><a href="#" id="blog-toggle">Blog</a></li>
+	<li><a href="#" id="project-toggle">Projects</a></li>
+	<li><a href="#" id="all-toggle">All</a></li>
+</ul>
+
 {{#each collections.articles}}
-	<div class="col-md-4 card">
-		<p class="small tag {{tag}}">{{tag}}</p>
-		<h2><a href="../../{{this.path}}">{{this.title}}</a></h2>
-		<p>{{this.excerpt}}</p>
+	<div class="col-lg-3 col-md-4 col-sm-6 card {{tag}}">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+			<h3 class="panel-title"><a href="../../{{this.path}}">{{this.title}}</a></h3>
+			</div>
+			<div class="panel-body">
+			{{this.excerpt}}
+			</div>
+			<!-- <div class="panel-footer small tag">{{tag}}</div> -->
+		</div>
 	</div>
 {{/each}}
 
 {{> footer}}
+
