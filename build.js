@@ -10,6 +10,7 @@ var metalsmith = require('metalsmith'),
 
 handlebars.registerPartial('header', fs.readFileSync(__dirname + '/templates/partials/header.hbt').toString());
 handlebars.registerPartial('footer', fs.readFileSync(__dirname + '/templates/partials/footer.hbt').toString());
+handlebars.registerHelper('dateFormat', require('handlebars-dateformat'));
 
 metalsmith(__dirname)
     .source('./src')
@@ -22,10 +23,14 @@ metalsmith(__dirname)
             reverse: 'true'
         },
         blog: {
-            pattern: 'content/blog/*.*'
+            pattern: 'content/blog/*.*',
+            sortBy: 'date',
+            reverse: 'true'
         },
         projects: {
-            pattern: 'content/projects/*.*'
+            pattern: 'content/projects/*.*',
+            sortBy: 'date',
+            reverse: 'true'
         }
     }))
     .use(permalinks())
