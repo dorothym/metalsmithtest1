@@ -19,6 +19,7 @@
   "dependencies": {
     "express": "^4.13.4",
     "handlebars": "^4.0.5",
+    "handlebars-dateformat": "^1.0.1",
     "metalsmith": "^2.1.0",
     "metalsmith-collections": "^0.7.0",
     "metalsmith-layouts": "^1.6.4",
