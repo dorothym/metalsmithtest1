@@ -21,5 +21,5 @@ To run it on your machine:
 ### Credits
 I learned a lot from these blog posts:
 
- * [http://www.robinthrift.com/posts/metalsmith-part-2-shaping-the-metal/](Robin Thrift)
- * [http://blog.lecomte.me/posts/2014/way-of-metalsmith/](Jocelyn LeComte)
+ * [http://www.robinthrift.com/posts/metalsmith-part-2-shaping-the-metal/]([http://www.robinthrift.com/posts/metalsmith-part-2-shaping-the-metal/])
+ * [http://blog.lecomte.me/posts/2014/way-of-metalsmith/](http://blog.lecomte.me/posts/2014/way-of-metalsmith/)
